@@ -16,19 +16,19 @@ ms.locfileid: "32317033"
 ---
 # <a name="window-interfaces-onenote"></a>Interfaces de fenêtre (OneNote 2013)
 
-Les interfaces **Window** et **Windows** sont que des objets OneNote 2013 API qui permet aux utilisateurs de travailler avec les fenêtres OneNote. Ces objets permettent aux utilisateurs d'énumérer l'ensemble des fenêtres OneNote et de modifier certaines propriétés de la fenêtre. 
+Les interfaces **Window** et **Windows** sont des objets API OneNote 2013 qui permettent aux utilisateurs de travailler avec les fenêtres OneNote. Ces objets permettent aux utilisateurs d'énumérer l'ensemble des fenêtres OneNote et de modifier certaines propriétés de la fenêtre. 
   
 ## <a name="onenote-window-views"></a>Affichages de fenêtre OneNote
 
 La liste suivante indique les modes de quatre affichage que vous pouvez utiliser pour les fenêtres OneNote : 
   
-- Mode normal  affiche la fenêtre de OneNote par défaut dans lequel les volets de navigation Bloc-notes et de Page sont visibles.
+- Mode normal—affiche la fenêtre de OneNote par défaut dans lequel les volets de navigation Bloc-notes et de Page sont visibles.
     
-- Page vue d'ensemble  affiche une minimale-interface utilisateur (IU) de vue dans laquelle les volets bloc-notes et de Page ne sont pas affichées.
+- Page vue d'ensemble—affiche une minimale-interface utilisateur (IU) de vue dans laquelle les volets bloc-notes et de Page ne sont pas affichées.
     
-- Note rapide  affiche une fenêtre de petite taille qui permet aux utilisateurs de prendre des notes courtes. Vous accédez généralement notes rapides par le biais de l'icône de OneNote dans la zone de notification de Windows, mais vous pouvez également accéder par le biais de l'onglet **affichage** dans OneNote. 
+- Note rapide—affiche une fenêtre de petite taille qui permet aux utilisateurs de prendre des notes courtes. Vous accédez généralement notes rapides par le biais de l'icône de OneNote dans la zone de notification de Windows, mais vous pouvez également accéder par le biais de l'onglet **affichage** dans OneNote. 
     
-- Ancrer sur le bureau  affiche une fenêtre OneNote que vous pouvez ancrer à n'importe quel côté du bureau (similaire à la barre des tâches). Cet affichage réduit la taille du bureau pour s'adapter à la fenêtre. Vous pouvez ancrer qu'une seule fenêtre à tout moment, et la fenêtre est toujours visible sans le blocage du bureau. 
+- Ancrer sur le bureau—affiche une fenêtre OneNote que vous pouvez ancrer à n'importe quel côté du bureau (similaire à la barre des tâches). Cet affichage réduit la taille du bureau pour s'adapter à la fenêtre. Vous pouvez ancrer qu'une seule fenêtre à tout moment, et la fenêtre est toujours visible sans le blocage du bureau. 
     
 La figure suivante montre l’apparence de l’affichage Page complète, De la station d’accueil au bureau et des notes rapides sur votre bureau.
   
@@ -81,7 +81,7 @@ Vous pouvez utiliser les méthodes suivantes de l'interface **Window** pour navi
 |:-----|:-----|
 |**Description** <br/> |Accède à l'objet spécifié dans la fenêtre OneNote. Par exemple, vous pouvez naviguer vers des sections, des pages et des éléments du plan au sein de pages.  <br/> |
 |**Syntaxe** <br/> | `HRESULT NavigateTo(`           ` [in]BSTR bstrHierarchyObjectID, `           ` [in]BSTR bstrObjectID); ` <br/> |
-|**Paramètres** <br/> | _bstrHierarchyObjectID_ la hiérarchie OneNote des ID de l'objet que vous voulez atteindre. L'ID d'objet peut faire référence à un bloc-notes OneNote, section, le groupe de section ou page. <br/>  _bstrObjectID_ l'ID de OneNote de l'objet spécifique à accéder à l'intérieur d'une page OneNote. Si l'utilisateur ne souhaite pas d'accéder à un objet spécifique dans une page, ce paramètre est défini sur null. <br/> |
+|**Paramètres** <br/> | _bstrHierarchyObjectID_—la hiérarchie OneNote des ID de l'objet que vous voulez atteindre. L'ID d'objet peut faire référence à un bloc-notes OneNote, section, le groupe de section ou page. <br/>  _bstrObjectID_—l'ID de OneNote de l'objet spécifique à accéder à l'intérieur d'une page OneNote. Si l'utilisateur ne souhaite pas d'accéder à un objet spécifique dans une page, ce paramètre est défini sur null. <br/> |
    
 **NavigateToUrl**
 
@@ -89,7 +89,7 @@ Vous pouvez utiliser les méthodes suivantes de l'interface **Window** pour navi
 |:-----|:-----|
 |**Description** <br/> |Si un lien OneNote est transmis (onenote://), cette méthode ouvre la fenêtre OneNote à l’emplacement correspondant dans OneNote. Toutefois, si le lien est un lien externe, tel https:// ou file://, une boîte de dialogue de sécurité s’affiche. Après le renvoi, OneNote essaie d'ouvrir la liaison et une erreur HResult.hrObjectDoesNotExist est renvoyée.  <br/> |
 |**Syntaxe** <br/> | `HRESULT NavigateToUrl (`           ` [in]BSTR bstrUrl); ` <br/> |
-|**Paramètres** <br/> | _bstrUrl_ l'URL à atteindre.  <br/> |
+|**Paramètres** <br/> | _bstrUrl_— l'URL à atteindre.  <br/> |
    
 **SetDockedLocation**
 
